@@ -1,5 +1,7 @@
 # centerscroll.nvim
 
+**!! I DON'T UNDERSTAND HOW TO MAKE A PLUGIN. IF YOU ARE READING THIS PLEASE HELP !!**
+
 ***The code is most probably of very low quality, and some things could, or should, be done differently.***
 ***PRs and explanations always welcome, thank you.***
 
