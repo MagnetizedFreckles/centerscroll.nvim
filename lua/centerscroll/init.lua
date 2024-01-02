@@ -2,7 +2,9 @@ function CenterCursor()
     vim.api.nvim_feedkeys("zz", "nt", true)
 end
 
-function CenterScroll()
+local M = {}
+
+function M.centerscroll()
     local visible_lines = vim.fn.winheight(0)
     local screen_center = math.ceil(visible_lines / 2)
     local scrolloff_value = screen_center - 1
@@ -27,8 +29,10 @@ local checkline = nil
 vim.api.nvim_create_autocmd("CursorMoved", {
     callback = function()
         if vim.fn.line(".") ~= checkline then
-            CenterScroll()
+            M.centerscroll()
             checkline = vim.fn.line(".")
         end
     end,
 })
+
+return M
