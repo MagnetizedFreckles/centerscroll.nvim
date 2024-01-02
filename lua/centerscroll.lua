@@ -1,5 +1,3 @@
-print("IT WORKS")
-
 function CenterCursor()
     vim.api.nvim_feedkeys("zz", "nt", true)
 end
@@ -29,6 +27,7 @@ end
 
 function M.autocmd()
     local checkline = nil
+    print("IT WORKS")
     vim.api.nvim_create_autocmd("CursorMoved", {
         callback = function()
             if vim.fn.line(".") ~= checkline then
