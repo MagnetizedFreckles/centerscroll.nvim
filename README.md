@@ -1,6 +1,9 @@
 # centerscroll.nvim
 
-**!! I DON'T UNDERSTAND HOW TO MAKE A PLUGIN. IF YOU ARE READING THIS PLEASE HELP !!**
+**Ok so clearly I don't know what I'm doing. I thought this was going to be easy, and now I'm stuck at trying to make my plugin work with lazy.**
+**It installs fine, but it just doesn't work. I don't know what I'm doing wrong, and I'm too tired to care.**
+**For now, I'll go back to using this code as part of simple config.**
+**If someone discovers this repo, feel free to do whatevs.**
 
 ***The code is most probably of very low quality, and some things could, or should, be done differently.***
 ***PRs and explanations always welcome, thank you.***
