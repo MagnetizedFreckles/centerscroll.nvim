@@ -25,14 +25,16 @@ function M.centerscroll()
     end
 end
 
-local checkline = nil
-vim.api.nvim_create_autocmd("CursorMoved", {
-    callback = function()
-        if vim.fn.line(".") ~= checkline then
-            M.centerscroll()
-            checkline = vim.fn.line(".")
-        end
-    end,
-})
+function M.autocmd()
+    local checkline = nil
+    vim.api.nvim_create_autocmd("CursorMoved", {
+        callback = function()
+            if vim.fn.line(".") ~= checkline then
+                M.centerscroll()
+                checkline = vim.fn.line(".")
+            end
+        end,
+    })
+end
 
 return M
