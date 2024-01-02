@@ -25,7 +25,7 @@ function M.centerscroll()
     end
 end
 
-function M.autocmd()
+function M.setup()
     local checkline = nil
     print("IT WORKS")
     vim.api.nvim_create_autocmd("CursorMoved", {
