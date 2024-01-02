@@ -1,3 +1,5 @@
+print("IT WORKS")
+
 function CenterCursor()
     vim.api.nvim_feedkeys("zz", "nt", true)
 end
