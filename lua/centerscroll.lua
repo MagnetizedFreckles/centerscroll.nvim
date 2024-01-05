@@ -1,5 +1,3 @@
-local M = {}
-
 local function centercursor()
     -- This should add "zz" after every executed command, so separate keymaps should be unnecessary
     -- So far, this works as intended
@@ -28,6 +26,8 @@ local function centerscroll()
         end
     end
 end
+
+local M = {}
 
 -- Instantiate a variable outside the scope of autocmd,
 -- to record the line where the cursor was on previous check
