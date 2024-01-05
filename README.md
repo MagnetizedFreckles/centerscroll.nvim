@@ -1,12 +1,7 @@
 # centerscroll.nvim
 
-**Ok so clearly I don't know what I'm doing. I thought this was going to be easy, and now I'm stuck at trying to make my plugin work with lazy.**
-**It installs fine, but it just doesn't work. I don't know what I'm doing wrong, and I'm too tired to care.**
-**For now, I'll go back to using this code as part of simple config.**
-**If someone discovers this repo, feel free to do whatevs.**
-
 ***The code is most probably of very low quality, and some things could, or should, be done differently.***
-***PRs and explanations always welcome, thank you.***
+***PRs and explanations are always welcome, thank you.***
 
 A small plugin that makes line with cursor stay in the middle of the screen, regardless of position in the file.  
 Made because every builtin and 'simpler' solution is, well, bad, in one way or another.
@@ -31,4 +26,13 @@ However, there may be bugs, since I'm very inexperienced, to say the least.
 
 ## Installation
 
-*Coming soon*
+[lazy.nvim](https://github.com/folke/lazy.nvim):
+```lua
+return {
+    "MagnetizedFreckles/centerscroll.nvim",
+    config = true,
+}
+```
+
+[packer.nvim](https://github.com/wbthomason/packer.nvim):  
+*Coming soon ig*
