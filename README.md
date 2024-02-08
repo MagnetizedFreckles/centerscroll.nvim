@@ -24,6 +24,11 @@ That's what I aim to do.
 Plugin shouldn't conflict with your existing keymaps, and it also should dynamically adapt to your screen size.
 However, there may be bugs, since I'm very inexperienced, to say the least.
 
+## Issues
+
+When nearing end of the file, plugin may append "zz" after automatic newline insertion,
+and I don't know how to fix this.
+
 ## Installation
 
 [lazy.nvim](https://github.com/folke/lazy.nvim):

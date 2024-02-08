@@ -1,7 +1,8 @@
 local function centercursor()
     -- This should add "zz" after every executed command, so separate keymaps should be unnecessary
-    -- So far, this works as intended
-    vim.api.nvim_feedkeys("zz", "nt", true)
+    -- But sometimes it'd insert "zz" after autoinserting
+    -- line and indent when opening braces, and I don't know how to fix this
+    vim.api.nvim_feedkeys("zz", "xn", true)
 end
 
 local function centerscroll()
