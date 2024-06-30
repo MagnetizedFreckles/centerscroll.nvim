@@ -1,30 +1,22 @@
 local function centercursor()
-    -- This should add "zz" after every executed command, so separate keymaps should be unnecessary
-    -- But sometimes it'd insert "zz" after autoinserting
-    -- line and indent when opening braces, and I don't know how to fix this
-    vim.api.nvim_feedkeys("zz", "xn", true)
+    -- I don't know if this is the most optimal way to autocenter
+    -- But it seems to work
+    vim.api.nvim_exec2("normal! zz", {})
 end
 
+-- NOTE: There is a sligtly noticeable "bump"
+-- when approaching EOF, for now I don't know how to fix
 local function centerscroll()
     local visible_lines = vim.fn.winheight(0)
     local screen_center = math.ceil(visible_lines / 2)
-    local scrolloff_value = screen_center - 1
 
     local distance_to_eof = vim.fn.line("$") - vim.fn.line(".")
 
+    -- Through testing it seems that keeping scrolloff constantly on doesn't do any harm
+    vim.opt.scrolloff = screen_center
+
     if distance_to_eof <= screen_center then
-        -- I thought that setting scrolloff on every move of cursor is ineffective, hence these checks.
-        -- But maybe just setting scrolloff is faster than performing the check, idk
-        if vim.opt.scrolloff:get() ~= 0 then
-            vim.opt.scrolloff = 0
-            centercursor()
-        else
-            centercursor()
-        end
-    elseif distance_to_eof > screen_center then
-        if vim.opt.scrolloff:get() ~= scrolloff_value then
-            vim.opt.scrolloff = scrolloff_value
-        end
+        centercursor()
     end
 end
 
